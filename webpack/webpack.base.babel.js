@@ -10,14 +10,20 @@ module.exports = (options) => ({
   }, options.output),
 
   module: {
-    loaders: [{
+    loaders: [
+    {
+      enforce: 'pre',
+      test: /\.js$/,
+      loader: "eslint-loader",
+      exclude: /node_modules/
+    }, {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
       query: options.babelQuery
     }, {
       test: /\.less$/,
-      loader: 'style!css!postcss!less?sourceMap'
+      loader: 'style-loader!css-loader!postcss-loader!less-loader'
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
@@ -58,7 +64,7 @@ module.exports = (options) => ({
   ]),
 
   resolve: {
-    modules: ['app', 'node_modules'],
+    modules: ['app', 'node_modules', 'app/assets'],
     extensions: [
       '.js',
       'json'
