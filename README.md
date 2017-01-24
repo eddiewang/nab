@@ -1,5 +1,8 @@
 ## NABP (Not Another Boilerplate) - My Personal Boilerplate for React
 
+> This is still in **development**.
+Feel free to look at the code, but I wouldn't recommend it for production use.
+
 ###Technology Stack:
 React
 MobX
@@ -12,4 +15,4 @@ Express
 - Opiniated, but very barebones
 
 ##Credits:
-This boilerplate borrows heavily from boilers I've previously contributed to, or worked with. Shoutout to react-boilerplate, Frontend Masters, and egghead for the useful resources!
+This boilerplate borrows heavily from boilerplates I've previously contributed to, or worked with. Shoutout to react-boilerplate, Frontend Masters, and egghead for the useful resources!
