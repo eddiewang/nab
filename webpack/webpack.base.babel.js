@@ -1,12 +1,12 @@
-const path = require('path');
-const webpack= require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = (options) => ({
   entry: options.entry,
 
   output: Object.assign({
     path: path.resolve(process.cwd(), 'build'),
-    publicPath: '/',
+    publicPath: '/'
   }, options.output),
 
   module: {
@@ -16,8 +16,8 @@ module.exports = (options) => ({
       exclude: /node_modules/,
       query: options.babelQuery
     }, {
-      test: /\less$/,
-      loader: "style!css!postcss!less?sourceMap"
+      test: /\.less$/,
+      loader: 'style!css!postcss!less?sourceMap'
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
@@ -30,18 +30,18 @@ module.exports = (options) => ({
             interlaced: false,
             pngquant: {
               quality: '65-90',
-              speed: 4,
-            },
-          },
-        },
-      ],
+              speed: 4
+            }
+          }
+        }
+      ]
     }, {
       test: /\.html$/,
-      loader: 'html-loader',
+      loader: 'html-loader'
     }, {
       test: /\.json$/,
-      loader: 'json-loader',
-    }],
+      loader: 'json-loader'
+    }]
   },
 
   plugins: options.plugins.concat([
@@ -51,24 +51,24 @@ module.exports = (options) => ({
 
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      },
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
     }),
-    new webpack.NamedModulesPlugin(),
+    new webpack.NamedModulesPlugin()
   ]),
 
   resolve: {
     modules: ['app', 'node_modules'],
     extensions: [
       '.js',
-      'json',
+      'json'
     ],
     mainFields: [
       'browser',
       'jsnext:main',
       'module',
-      'main',
-    ],
+      'main'
+    ]
   },
-  devtool: options.devtool,
-});
+  devtool: options.devtool
+})

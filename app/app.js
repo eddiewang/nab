@@ -6,4 +6,4 @@ ReactDOM.render(
       Welcome to react!
   </div>,
   document.getElementById('root')
-);
+)
