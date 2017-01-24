@@ -1,4 +1,4 @@
-## NABP (Not Another Boilerplate) - My Personal Boilerplate for React
+## NAB (Not Another Boilerplate) - My Personal Boilerplate for React
 
 > This is still in **development**.
 Feel free to look at the code, but I wouldn't recommend it for production use.
