@@ -43,6 +43,7 @@
     "webpack-hot-middleware": "^2.15.0"
   },
   "dependencies": {
+    "body-parser": "^1.16.0",
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "ip": "^1.1.4",
@@ -53,6 +54,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "v4",
+    "semantic-ui-react": "^0.64.4",
     "whatwg-fetch": "^2.0.2"
   }
 }
