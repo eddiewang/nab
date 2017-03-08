@@ -1,0 +1,284 @@
+{
+    "status": 200,
+    "results": [
+        {
+            "user_id": "5797907fe521f85a17b300ce",
+            "name": "Alex Zaharia",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/887330981292855/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/887330981292855/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/887330981292855/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/887330981292855/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "586c254ea22c7de35adb079d",
+            "name": "Ari Shusterman",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/1515340667/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/1515340667/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/1515340667/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/1515340667/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": true
+        },
+        {
+            "user_id": "53f3fec1a59ac68878647fa5",
+            "name": "Brandon Chu",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/10201745578946877/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10201745578946877/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10201745578946877/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10201745578946877/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "567d7f08c56bf3461a94f148",
+            "name": "Dhruv Dwivedi",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/10152017224516373/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10152017224516373/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10152017224516373/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10152017224516373/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "57878c4e97bd22ea39af16a5",
+            "name": "Gabriel Claridge",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/10152030750567393/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10152030750567393/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10152030750567393/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10152030750567393/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "568148b25bbe8440610199f9",
+            "name": "Hiren Patel",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/1678811942/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/1678811942/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/1678811942/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/1678811942/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "587bedbfc1234d2a50ecbde1",
+            "name": "Karanveer Singh",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/10201965657289025/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10201965657289025/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10201965657289025/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/10201965657289025/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "55315d4c31a1c06e16f0f681",
+            "name": "Rahul Khullar",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/695425320510625/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/695425320510625/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/695425320510625/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/695425320510625/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        },
+        {
+            "user_id": "54a9c70b51926c302b58316e",
+            "name": "Ricardo Xavier",
+            "photo": [
+                {
+                    "processedFiles": [
+                        {
+                            "url": "https://graph.facebook.com/100001122792341/picture?height=84&width=84",
+                            "height": 84,
+                            "width": 84
+                        },
+                        {
+                            "url": "https://graph.facebook.com/100001122792341/picture?height=172&width=172",
+                            "height": 172,
+                            "width": 172
+                        },
+                        {
+                            "url": "https://graph.facebook.com/100001122792341/picture?height=320&width=320",
+                            "height": 320,
+                            "width": 320
+                        },
+                        {
+                            "url": "https://graph.facebook.com/100001122792341/picture?height=640&width=640",
+                            "height": 640,
+                            "width": 640
+                        }
+                    ]
+                }
+            ],
+            "in_squad": false
+        }
+    ]
+}

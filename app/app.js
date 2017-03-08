@@ -1,19 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Match } from 'react-router'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Landing from 'containers/Landing'
+
+import { Provider } from 'mobx-react'
+import { MainStore } from 'stores/MainStore'
 
 import 'less/style.less'
 import 'less/normalize.less'
 
 class App extends React.Component {
+  mainStore = new MainStore()
+
   render () {
     return (
-      <BrowserRouter>
-        <div className='app'>
-          <Match exactly pattern='/' component={Landing} />
-        </div>
-      </BrowserRouter>
+      <Provider mainStore={this.mainStore}>
+        <Router>
+          <div className='app'>
+            <Route exactly pattern='/' component={Landing} />
+          </div>
+        </Router>
+      </Provider>
     )
   }
 }
