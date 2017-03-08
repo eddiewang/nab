@@ -7,8 +7,7 @@ const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngr
 const resolve = require('path').resolve
 const bodyParser = require('body-parser')
 
-const myApi = require('./api/api.js')
-
+const myApi = require('./api')
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))

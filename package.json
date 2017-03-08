@@ -4,9 +4,9 @@
   "description": "Not Another Boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "NODE_ENV=development nodemon --watch server server",
     "start:tunnel": "ENABLE_TUNNEL=true node server",
-    "prestart": "npm run build",
+    "start:prod": "npm run build && NODE_ENV=production pm2 start server",
     "build": "rimraf ./build && NODE_ENV=production webpack --config webpack/webpack.prod.babel.js --color --progress --display-error-details --display-chunks",
     "lint": "eslint js/**/*.js"
   },
