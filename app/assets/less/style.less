@@ -1,11 +1,13 @@
+@import 'grid.less';
+
+.grid();
+
 .title {
   color: lighten(black, 23%)
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  .grid(4);
+  text-align: center;
 }
+
