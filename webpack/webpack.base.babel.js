@@ -22,8 +22,8 @@ module.exports = (options) => ({
         exclude: /node_modules/,
         query: options.babelQuery
       }, {
-        test: /\.less$/,
-        loader: 'style-loader!css-loader!postcss-loader!less-loader'
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!postcss-loader!sass-loader'
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
@@ -47,6 +47,9 @@ module.exports = (options) => ({
       }, {
         test: /\.json$/,
         loader: 'json-loader'
+      }, {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: 'file-loader'
       }]
   },
 

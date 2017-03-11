@@ -6,8 +6,7 @@ import Landing from 'containers/Landing'
 import { Provider } from 'mobx-react'
 import { MainStore } from 'stores/MainStore'
 
-import 'less/style.less'
-import 'less/normalize.less'
+import 'scss/style.scss'
 
 class App extends React.Component {
   mainStore = new MainStore()
