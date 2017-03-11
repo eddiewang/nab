@@ -1,0 +1,72 @@
+$bp-medium: 850px;
+$bp-large: 1000px;
+$bp-xlarge: 1190px;
+$bp-site-max-width: 1440px;
+$site-max-width: 1400px;
+
+$base-unit: 10px;
+
+$base-font-size: 16px;
+$secondary-font-size: 14px;
+$error-font-size: 13px;
+
+$padding-horizontal: 32px;
+$padding-vertical: 24px;
+
+$margin-vertical: 15px;
+
+$color-gray-5: #fafafa;
+$color-gray-6: #f9f8f7;
+$color-gray-10: #f2f2f2;
+$color-gray-15: #eee;
+$color-gray-20: #ebebeb;
+$color-gray-25: #e8e8e8;
+$color-gray-30: #a3a6a7;
+$color-gray-35: #ddd;
+$color-gray-40: #cfcfcf;
+$color-gray-50: #a7a7a7;
+$color-gray-52: #767a7b;
+$color-gray-60: #969696;
+$color-gray-65: #737373;
+$color-gray-80: #555;
+$color-gray-90: #333;
+$color-gray-95: #222;
+$color-gray-98: #181818;
+$color-gray-99: #121212;
+$color-gray-100: #000000;
+
+$color-white: #ffffff;
+$color-black: $color-gray-100;
+
+$color-red: #ed5a3f;
+$color-crusta: #f27c5e;
+$color-red-transparent: rgba($color-red, 0.2);
+
+$color-yellow: #fab131;
+$color-yellow-60: #e99f03;
+$color-yellow-hover: #f7a81d;
+$color-faded-yellow: #fdd898;
+$color-translucent-yellow: #fbbc50;
+
+$color-green: #7cb7b6;
+$color-green-80: #3c8280;
+$color-green-transparent: rgba($color-green, 0.2);
+
+$color-dark-beige: #99908a;
+$color-light-beige: #faf7f5;
+
+$color-brown-5: #f5f5f1;
+$color-brown-25: $color-dark-beige;
+
+$color-white-rgba: rgba(255,255,255,1.0);
+$color-white-semitransparent: rgba(255, 255, 255, 0.15);
+$color-black-semitransparent: rgba(0,0,0,0.15);
+$color-black-semitransparent-darker: rgba(0,0,0,0.2);
+$color-black-semitransparent-darkest: rgba(0, 0, 0, 0.3);
+
+$color-border: $color-gray-35;
+
+$card-container-header-height: 100px;
+$card-border-radius: 3px;
+$card-title-font-size: 22px;
+$card-section-border-width: 6px;

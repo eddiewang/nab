@@ -1,0 +1,193 @@
+.form-input-text {
+  @include font-sans;
+  background: $color-white;
+  border: 1px solid $color-border;
+  color: $color-black;
+  display: block;
+  font-size: $base-font-size;
+  margin-bottom: $margin-vertical;
+  margin-top: 0;
+  padding: 13px 15px;
+  width: 100%;
+
+  &:focus {
+    border-color: $color-green;
+    outline: 0;
+  }
+
+  @include medium {
+    font-size: 18px;
+    padding: 18px 20px;
+  }
+}
+
+.form-input-text.color-beige {
+  @include text-gray;
+  background-color: $color-light-beige;
+  border-color: $color-border;
+
+  &:focus {
+    border-color: $color-gray-40;
+  }
+}
+
+.form-input-text.size-sm {
+  @include font-sans;
+  font-size: $base-font-size;
+  padding: 8px 12px;
+
+  @include medium {
+    font-size: 18px;
+    padding: $base-unit 15px;
+  }
+}
+
+.form-row-horizontal-legend {
+  color: $color-dark-beige;
+  display: block;
+  margin-bottom: $margin-vertical;
+  text-align: center;
+
+  @include medium {
+    text-align: left;
+  }
+}
+
+.form-row-horizontal-md {
+  margin: 0 $margin-vertical;
+  text-align: center;
+  @include medium {
+    margin: 0;
+    text-align: left;
+
+    .form-element {
+      display: inline-block;
+      margin-left: 5px;
+      margin-bottom: 0;
+      vertical-align: middle;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+select.form-control {
+  @include font-sans;
+  background: url('../images/arrow-down.svg') no-repeat right 10px center white; // TODO ensure images is included in bower package
+  background-size: 10px 10px; // needed for IE
+  border: 1px solid $color-border;
+  border-radius: 0;
+  color: $color-black;
+  display: block;
+  font-size: $base-font-size;
+  height: 60px;
+  line-height: 1.4;
+  margin-bottom: $margin-vertical;
+  padding: $base-unit 30px $base-unit 20px;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+
+  option {
+    background-color: $color-white;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+  }
+
+  &.unselected, &:disabled {
+    @include text-gray;
+  }
+}
+
+.size-sm select.form-control,
+select.form-control.size-sm {
+  font-size: $base-font-size;
+  padding: 8px 12px;
+  height: 40px;
+  @include medium {
+    font-size: 18px;
+    padding: $base-unit 30px $base-unit 15px;
+    height: 44px;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.input-group {
+  input, button {
+    display: inline-block;
+    margin-right: $base-unit;
+  }
+  .form-input-text {
+    width: auto;
+  }
+  .field_with_errors {
+    display: inline-block;
+  }
+}
+
+.adjacent-inputs-md {
+  @include medium {
+    @include clearfix;
+    margin: 0 auto;
+    input {
+      width: calc(50% - 10px);
+    }
+    input:first-child {
+      float: left;
+    }
+    input:last-child {
+      float: right;
+    }
+  }
+}
+
+.form-inline {
+  .control-label {
+    padding-top: 20px;
+    text-align: right;
+  }
+
+  &.size-sm {
+    .control-label {
+      padding-top: 12px;
+    }
+    .control-label.multiline {
+      padding-top: 6px;
+    }
+  }
+}
+
+.help-block {
+  font-size: $error-font-size;
+
+  &.prefix-suffix {
+    @include text-red;
+    margin-top: $base-unit;
+  }
+}
+
+.has-error .field_with_errors ~ .help-block,
+.form-input-text + .help-block {
+  margin-top: -5px;
+}
+
+.has-error .form-input-text,
+.form-input-text.has-error,
+.has-error select.form-control,
+select.form-control.has-error {
+  border-color: $color-red;
+}
+
+.has-error .help-block,
+.help-block.has-error {
+  @include text-red;
+  a {
+    font-size: $error-font-size;
+  }
+}

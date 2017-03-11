@@ -1,0 +1,127 @@
+.card-container {
+  @extend .container-padded;
+  .header {
+    height: $card-container-header-height;
+    .title {
+      line-height: $card-container-header-height;
+      font-size: $card-title-font-size;
+    }
+    .buttons {
+      padding-top: 28px;
+      text-align: right;
+      .button {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+@for $i from 1 through $grid-cols {
+  @include medium {
+    .card-row-md > .col-#{$i} {
+      margin-left: 20px;
+      width: (100% / $grid-cols) * $i;
+      &:first-child, &.first-child { margin-left: 0; }
+    }
+  }
+}
+
+.card-row-md {
+  @include medium { display: flex; }
+}
+
+.card {
+  position: relative;
+  font-size: $secondary-font-size;
+  background-color: $color-white;
+  border-radius: $card-border-radius;
+  margin-bottom: $base-unit * 2; // spacing between cards
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.07);
+
+  &.disabled {
+    opacity: 0.6;
+  }
+
+  &.no-background-color {
+    background-color: $color-white-semitransparent;
+  }
+
+  .section {
+    display: block;
+    border-bottom: 1px solid $color-gray-20;
+    padding: $padding-vertical $padding-horizontal;
+
+    &.padding-sm {
+      padding: 20px 32px;
+    }
+
+    &.padding-lg {
+      padding: 20px 32px;
+
+      @include medium {
+        padding: 36px 44px;
+      }
+    }
+
+    &.no-padding {
+      padding: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.no-border {
+      border-bottom: none;
+    }
+
+    &.section-header,
+    .section-header {
+      @include section-header;
+    }
+  }
+
+  a.section,
+  .actionable.section {
+    padding-left: $padding-horizontal - $card-section-border-width;
+    cursor: pointer;
+    text-decoration: none;
+    border-left: $card-section-border-width solid $color-white;
+    &:hover {
+      border-left: $card-section-border-width solid $color-yellow;
+      background-color: rgba(245,243,241, 0.6);
+    }
+    &:active, &.active {
+      border-left: $card-section-border-width solid $color-yellow;
+      background-color: rgba(240,240,236, 0.6);
+    }
+  }
+
+  .section-inline { // TODO improve on styling to better distinguish inline sections
+    display: inline-block;
+    &:last-child {
+      padding-right: 0 !important;
+    }
+  }
+
+}
+
+.card-inner-top {
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+}
+
+.card-inner-bottom {
+  border-bottom-left-radius: $card-border-radius;
+  border-bottom-right-radius: $card-border-radius;
+}
+
+.card-inner-left {
+  border-top-left-radius: $card-border-radius;
+  border-bottom-left-radius: $card-border-radius;
+}
+
+.card-inner-right {
+  border-top-right-radius: $card-border-radius;
+  border-bottom-right-radius: $card-border-radius;
+}

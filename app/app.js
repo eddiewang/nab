@@ -6,7 +6,7 @@ import Landing from 'containers/Landing'
 import { Provider } from 'mobx-react'
 import { MainStore } from 'stores/MainStore'
 
-import 'scss/style.scss'
+import 'scss/fabric.scss'
 
 class App extends React.Component {
   mainStore = new MainStore()
@@ -16,7 +16,7 @@ class App extends React.Component {
       <Provider mainStore={this.mainStore}>
         <Router>
           <div className='app'>
-            <Route exactly pattern='/' component={Landing} />
+            <Route exact path='/' component={Landing} />
           </div>
         </Router>
       </Provider>
