@@ -1,3 +1,9 @@
+@include font-face($font-number, "../fonts/Akkurat", null, null, woff woff2);
+@include font-face($font-sans, "../fonts/FuturaBT-Book", null, null, woff woff2);
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@include font-face($font-sans-bold, "../fonts/FuturaBT-Heavy", null, null, woff woff2);
+
+
 h1 { @include h1-sans; }
 h2 { @include h2-sans; }
 h3 { @include h3-sans; }

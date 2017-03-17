@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from 'components/Title'
 
 import { inject, observer } from 'mobx-react'
 
@@ -11,9 +10,27 @@ class Landing extends React.Component {
   }
   render () {
     return (
-      <div className='main-container'>
-        <Title>hello universe.</Title>
-        <h2>{this.props.mainStore.counter}</h2>
+      <div className='container'>
+        <div className='card-container'>
+          <div className='section'>
+            <div className='header'>
+              <div className='title'>Custom App</div>
+            </div>
+          </div>
+          <div className='card'>
+            <div className='section'>
+              <div className='row-sm'>
+                <div className='header'>
+                  <div className='title'>This is a custom title</div>
+                </div>
+              </div>
+              <div className='buttons'>
+                <button className='button primary-action'>Primary</button>
+                <button className='button secondary-action'>Secondary</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
