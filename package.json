@@ -4,10 +4,10 @@
   "description": "Not Another Boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production pm2-docker start server",
+    "start": "cross-env NODE_ENV=production pm2-docker start server",
     "postinstall": "npm rebuild node-sass && npm run build",
     "start:tunnel": "ENABLE_TUNNEL=true node server",
-    "dev": "NODE_ENV=development nodemon --watch server server",
+    "dev": "cross-env NODE_ENV=development nodemon --watch server server",
     "build": "rimraf ./build && cross-env NODE_ENV=production webpack --config webpack/webpack.prod.babel.js --color --progress --display-error-details --display-chunks",
     "lint": "eslint js/**/*.js"
   },
