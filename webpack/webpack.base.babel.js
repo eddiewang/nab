@@ -19,28 +19,13 @@ module.exports = (options) => ({
       }, {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: options.babelQuery
+        exclude: /node_modules/
       }, {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!postcss-loader!sass-loader'
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            query: {
-              progressive: true,
-              optimizationLevel: 7,
-              interlaced: false,
-              pngquant: {
-                quality: '65-90',
-                speed: 4
-              }
-            }
-          }
-        ]
+        loaders: 'file-loader'
       }, {
         test: /\.html$/,
         loader: 'html-loader'

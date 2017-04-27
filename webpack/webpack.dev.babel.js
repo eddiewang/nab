@@ -23,10 +23,5 @@ module.exports = require('./webpack.base.babel')({
     })
   ],
 
-  babelQuery: {
-    presets: ['es2015', 'stage-0', 'react'],
-    plugins: ['transform-async-to-generator', 'transform-decorators-legacy']
-  },
-
   devtool: 'cheap-module-eval-source-map'
 })

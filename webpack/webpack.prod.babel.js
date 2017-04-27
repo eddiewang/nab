@@ -40,11 +40,6 @@ module.exports = require('./webpack.base.babel.js')({
     })
   ],
 
-  babelQuery: {
-    presets: ['es2015', 'stage-0', 'react'],
-    plugins: ['transform-async-to-generator', 'transform-decorators-legacy']
-  },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
