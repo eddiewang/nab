@@ -13,7 +13,7 @@ class Landing extends React.Component {
   render () {
     return (
       <Container>
-        <h1>let's get coding</h1>
+        <input type='text' />
       </Container>
     )
   }
