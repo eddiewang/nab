@@ -7,12 +7,15 @@ import { graphql, compose } from 'react-apollo'
 
 class Landing extends React.Component {
   render() {
-    console.log(this.props.getData)
-    return (
-      <div>
-        <h3>welcome to nab</h3>
-      </div>
-    )
+    if (this.props.getData.loading) {
+      return <div>loading</div>
+    } else {
+      return (
+        <div>
+          <h3>welcome to nab</h3>
+        </div>
+      )
+    }
   }
 }
 
