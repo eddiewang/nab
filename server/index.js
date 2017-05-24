@@ -3,7 +3,8 @@ const logger = require('./logger')
 const argv = require('minimist')(process.argv.slice(2))
 const setup = require('./middleware/frontendMiddleware')
 const isDev = process.env.NODE_ENV !== 'production'
-const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false
+// const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false
+const ngrok = false
 const resolve = require('path').resolve
 const bodyParser = require('body-parser')
 const detect = require('detect-port')
@@ -39,7 +40,9 @@ detect(DEFAULT_PORT).then(port => {
   }
 
   if (isInteractive) {
-    const question = chalk.yellow(`Something is already running on port ${DEFAULT_PORT}. Change ports?`)
+    const question = chalk.yellow(
+      `Something is already running on port ${DEFAULT_PORT}. Change ports?`
+    )
 
     prompt(question, true).then(shouldChangePort => {
       if (shouldChangePort) {
@@ -47,12 +50,14 @@ detect(DEFAULT_PORT).then(port => {
       }
     })
   } else {
-    console.log(chalk.red(`Something is already running on port ${DEFAULT_PORT}`))
+    console.log(
+      chalk.red(`Something is already running on port ${DEFAULT_PORT}`)
+    )
   }
 })
 // Start your app.
 const run = port => {
-  app.listen(port, host, (err) => {
+  app.listen(port, host, err => {
     if (err) {
       return logger.error(err.message)
     }
