@@ -15,7 +15,7 @@ module.exports = require('./webpack.base.babel.js')({
   ],
 
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     chunkFilename: '[name].[chunkhash].js'
   },
 
