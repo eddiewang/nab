@@ -15,10 +15,9 @@ module.exports = require('./webpack.base.babel.js')({
   ],
 
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js'
   },
-  devtool: 'cheap-module-source-map',
 
   cssLoader: ExtractTextPlugin.extract({
     fallback: 'style-loader',

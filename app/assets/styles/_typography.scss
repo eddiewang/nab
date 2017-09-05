@@ -1,79 +1,129 @@
-@mixin font-base($weight: 400) {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: $weight;
+// Typography
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: .25em;
+  margin-top: 0;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500;
+}
+h1,
+.h1 {
+  font-size: 2rem;
+}
+h2,
+.h2 {
+  font-size: 1.6rem;
+}
+h3,
+.h3 {
+  font-size: 1.4rem;
+}
+h4,
+.h4 {
+  font-size: 1.2rem;
+}
+h5,
+.h5 {
+  font-size: 1rem;
+}
+h6,
+.h6 {
+  font-size: .8rem;
 }
 
-@mixin font-heading($weight: 400) {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: $weight;
+// Paragraphs
+p {
+  line-height: 1.2 * $line-height;
+  margin: 0 0 $unit-4;
 }
 
-@mixin h1-sans {
-  font-size: 30px;
-  line-height: 35px;
-  @include font-heading;
-  @include medium {
-    font-size: 54px;
-    line-height: 54px;
+// Semantic text elements
+a,
+ins,
+u {
+  text-decoration-skip: ink edges;
+}
+
+abbr[title] {
+  border-bottom: $border-width dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+kbd {
+  @include label-base();
+  @include label-variant($light-color, $dark-color);
+  font-size: .65rem;
+}
+
+mark {
+  @include label-variant($body-font-color, $highlight-color);
+  border-radius: $border-radius;
+  padding: .05rem;
+}
+
+// Blockquote
+blockquote {
+  border-left: $border-width-lg solid $border-color;
+  margin-left: 0;
+  padding: $unit-2 $unit-4;
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
-@mixin h2-sans {
-  font-size: 27px;
-  line-height: 31px;
-  @include font-heading;
-  @include medium {
-    font-size: 36px;
-    line-height: 40px;
+// Lists
+ul,
+ol {
+  margin: $unit-4 0 $unit-4 $unit-4;
+  padding: 0;
+
+  ul,
+  ol {
+    margin: $unit-4 0 $unit-4 $unit-4;
+  }
+
+  li {
+    margin-top: $unit-2;
   }
 }
 
-@mixin h3-sans {
-  font-size: 20px;
-  line-height: 22px;
-  @include font-heading;
-  @include medium {
-    font-size: 27px;
-    line-height: 33px;
+ul {
+  list-style: disc inside;
+
+  ul {
+    list-style-type: circle;
   }
 }
 
-@mixin h4-sans {
-  font-size: 18px;
-  line-height: 19px;
-  @include font-heading;
-  @include medium {
-    font-size: 23px;
-    line-height: 25px;
+ol {
+  list-style: decimal inside;
+
+  ol {
+    list-style-type: lower-alpha;
   }
 }
 
-@mixin h5-sans {
-  font-size: $base-font-size;
-  line-height: 17px;
-  @include font-heading;
-  @include medium {
-    font-size: 18px;
-    line-height: 20px;
+dl {
+  dt {
+    font-weight: bold;
   }
-}
-
-h1 {
-  @include h1-sans;
-}
-
-h2 {
-  @include h2-sans;
-}
-
-h3 {
-  @include h3-sans;
-}
-
-h4 {
-  @include h4-sans;
-}
-
-h5 {
-  @include h5-sans;
+  dd {
+    margin: $unit-2 0 $unit-4 0;
+  }
 }
