@@ -1,10 +1,10 @@
 {
   "name": "nab",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Not Another Boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production pm2-docker start server",
+    "start": "NODE_ENV=production node server",
     "postinstall": "npm rebuild node-sass && npm run build",
     "start:tunnel": "ENABLE_TUNNEL=true node server",
     "dev": "cross-env NODE_ENV=development nodemon --watch server server",
