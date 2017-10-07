@@ -3,21 +3,21 @@
 > This is still in **development**.
 Feel free to look at the code, but I wouldn't recommend it for production use.
 
-###Main Technology Stack:
+### Main Technology Stack:
 - React
 - MobX
 - NodeJS
 - Express
 
-##Install:
+## Install:
 Make sure you have Yarn installed.
 Open terminal and cd into the working dictionary then type:
 `yarn`
 
-###Why use this boilerplate:
+### Why use this boilerplate:
 - Dead simple architecture
 - Easy to understand for beginners and intermediates looking to learn best practices
 - Opiniated, but very barebones
 
-##Credits:
+## Credits:
 This boilerplate borrows heavily from boilerplates I've previously contributed to, or worked with. Shoutout to react-boilerplate, Frontend Masters, and egghead for the useful resources!
