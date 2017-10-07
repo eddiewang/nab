@@ -19,28 +19,14 @@ module.exports = require('./webpack.base.babel.js')({
     chunkFilename: '[name].[chunkhash].js'
   },
 
-  cssLoader: ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: 'css-loader!postcss-loader'
-  }),
-
-  lessLoader: ExtractTextPlugin.extract({
-    fallback: 'style-loader',
-    use: 'css-loader!postcss-loader!less-loader'
-  }),
-
-  postcssPlugins: [
-    postcssFocus(),
-    cssnext({
-      browsers: ['last 2 versions', 'IE > 10']
-    }),
-    postcssReporter({
-      clearMessages: true
-    })
-  ],
-
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      children: true,
+      minChunks: 2,
+      async: true
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
