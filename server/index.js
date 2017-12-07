@@ -3,7 +3,9 @@ const logger = require('./logger')
 const argv = require('minimist')(process.argv.slice(2))
 const setup = require('./middleware/frontendMiddleware')
 const isDev = process.env.NODE_ENV !== 'production'
-const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false
+const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel
+  ? require('ngrok')
+  : false
 const resolve = require('path').resolve
 const bodyParser = require('body-parser')
 const detect = require('detect-port')
@@ -12,6 +14,7 @@ const app = express()
 const prompt = require('./react-dev-utils/prompt')
 const openBrowser = require('./react-dev-utils/openBrowser')
 const chalk = require('chalk')
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
@@ -39,7 +42,9 @@ detect(DEFAULT_PORT).then(port => {
   }
 
   if (isInteractive) {
-    const question = chalk.yellow(`Something is already running on port ${DEFAULT_PORT}. Change ports?`)
+    const question = chalk.yellow(
+      `Something is already running on port ${DEFAULT_PORT}. Change ports?`
+    )
 
     prompt(question, true).then(shouldChangePort => {
       if (shouldChangePort) {
@@ -47,12 +52,14 @@ detect(DEFAULT_PORT).then(port => {
       }
     })
   } else {
-    console.log(chalk.red(`Something is already running on port ${DEFAULT_PORT}`))
+    console.log(
+      chalk.red(`Something is already running on port ${DEFAULT_PORT}`)
+    )
   }
 })
 // Start your app.
 const run = port => {
-  app.listen(port, host, (err) => {
+  app.listen(port, host, err => {
     if (err) {
       return logger.error(err.message)
     }
@@ -70,7 +77,7 @@ const run = port => {
       logger.appStarted(port, prettyHost)
     }
     if (isDev) {
-      openBrowser(protocol + '://' + prettyHost + ':' + port + '/')
+      // openBrowser(protocol + '://' + prettyHost + ':' + port + '/')
     }
   })
 }

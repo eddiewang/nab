@@ -6,13 +6,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const cssnext = require('postcss-cssnext')
 const postcssFocus = require('postcss-focus')
 const postcssReporter = require('postcss-reporter')
+const MinifyPlugin = require('babel-minify-webpack-plugin')
 
 module.exports = require('./webpack.base.babel.js')({
-  entry: [
-    // disabled eventsource-polyfill because who the fuck uses IE to dev
-    'babel-polyfill',
-    path.join(process.cwd(), 'app/app.js')
-  ],
+  entry: ['babel-polyfill', path.join(process.cwd(), 'app/app.js')],
 
   output: {
     filename: '[name].[hash].js',
@@ -28,11 +25,6 @@ module.exports = require('./webpack.base.babel.js')({
       async: true
     }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false // ...but do not show warnings in the console (there is a lot of them)
-      }
-    }),
     new HtmlWebpackPlugin({
       template: 'app/index.html',
       minify: {
@@ -49,6 +41,11 @@ module.exports = require('./webpack.base.babel.js')({
       },
       inject: true
     }),
-    new ExtractTextPlugin('[name].[contenthash].css')
-  ]
+    new ExtractTextPlugin('[name].[contenthash].css'),
+    new MinifyPlugin()
+  ],
+  performance: {
+    assetFilter: assetFilename =>
+      !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)
+  }
 })
