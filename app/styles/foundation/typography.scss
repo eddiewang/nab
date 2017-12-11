@@ -1,7 +1,23 @@
 $typography-condensed: em(640px);
 
+@font-face {
+  font-family: Interface;
+  src: url('assets/fonts/Inter-UI-Regular.woff') format('woff'),
+       url('assets/fonts/Inter-UI-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Interface ;
+  src: url('assets/fonts/Inter-UI-Medium.woff') format('woff'),
+       url('assets/fonts/Inter-UI-Medium.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 $font-family-data: (
-  base: #{-apple-system, 'BlinkMacSystemFont', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif},
+  base: #{Interface,-apple-system, 'BlinkMacSystemFont', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif},
   monospace: #{Monaco, Consolas, 'Lucida Console', monospace}
 );
 
