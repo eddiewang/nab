@@ -1,5 +1,14 @@
 {
-    "compilerOptions": {
-        "experimentalDecorators": true
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "app/*",
+        "app/assets/*",
+        "mock/*"
+      ]
     }
+  }
 }

@@ -14,10 +14,6 @@ module.exports = options => ({
     },
     options.output
   ),
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css']
-  },
-
   module: {
     loaders: [
       {
@@ -32,12 +28,12 @@ module.exports = options => ({
       },
       {
         enforce: 'pre',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: ['eslint-loader'],
         exclude: /node_modules/
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: ['babel-loader'],
         exclude: /node_modules/
       },
@@ -120,8 +116,8 @@ module.exports = options => ({
   ]),
 
   resolve: {
-    modules: ['app', 'node_modules', 'app/assets', 'data'],
-    extensions: ['.ts', '.tsx', '.js', '.css', '.json', '.scss', '.less']
+    modules: ['app', 'node_modules', 'app/assets', 'mock'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css']
   },
   target: 'web',
   performance: options.performance || {},

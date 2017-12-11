@@ -9,7 +9,7 @@ const postcssReporter = require('postcss-reporter')
 const MinifyPlugin = require('babel-minify-webpack-plugin')
 
 module.exports = require('./webpack.base.babel.js')({
-  entry: ['babel-polyfill', path.join(process.cwd(), 'app/app.js')],
+  entry: ['babel-polyfill', path.join(process.cwd(), 'app/app.jsx')],
 
   output: {
     filename: '[name].[hash].js',

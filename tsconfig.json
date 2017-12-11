@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "module": "esnext",
+    "jsx": "react",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "target": "es5",
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "app/*",
+        "app/assets/*",
+        "mock/*"
+      ]
+    }
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "transpileOnly": true
+  }
+}

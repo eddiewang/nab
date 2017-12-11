@@ -5,6 +5,14 @@ import Landing from 'containers/Landing'
 
 import { Provider } from 'mobx-react'
 import { MainStore } from 'stores/MainStore'
+import { BreakpointProvider } from 'hedron'
+import { Helmet } from 'react-helmet'
+
+const breakpoints = {
+  sm: 500,
+  md: 768,
+  lg: 1100
+}
 
 class App extends React.Component {
   mainStore = new MainStore()
@@ -12,11 +20,16 @@ class App extends React.Component {
   render () {
     return (
       <Provider mainStore={this.mainStore}>
-        <Router>
-          <div className='app'>
-            <Route exact path='/' component={Landing} />
-          </div>
-        </Router>
+        <BreakpointProvider breakpoints={breakpoints}>
+          <Router>
+            <div className='app'>
+              <Helmet>
+                <title>My App</title>
+              </Helmet>
+              <Route exact path='/' component={Landing} />
+            </div>
+          </Router>
+        </BreakpointProvider>
       </Provider>
     )
   }
