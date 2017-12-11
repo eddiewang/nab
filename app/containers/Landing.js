@@ -1,13 +1,14 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
+import Button from 'components/Button'
 
 @inject('mainStore')
 @observer
 class Landing extends React.Component {
-  render() {
+  render () {
     return (
       <div>
-        <h1>Hi</h1>
+        <Button />
       </div>
     )
   }

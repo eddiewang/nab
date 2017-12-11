@@ -1,11 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 process.noDeprecation = true
 
 module.exports = options => ({
-  entry: options.entry,
+  entry: [...options.entry, path.join(process.cwd(), 'app/styles.scss')],
   output: Object.assign(
     {
       path: path.resolve(process.cwd(), 'build'),
@@ -13,39 +14,90 @@ module.exports = options => ({
     },
     options.output
   ),
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css']
+  },
 
   module: {
     loaders: [
       {
+        test: /\.(ts|tsx)$/,
+        loaders: [
+          { loader: 'cache-loader' },
+          {
+            loader: 'awesome-typescript-loader'
+          }
+        ],
+        exclude: [/node_modules/]
+      },
+      {
         enforce: 'pre',
         test: /\.js$/,
-        loader: 'eslint-loader',
+        loader: ['eslint-loader'],
         exclude: /node_modules/
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: ['babel-loader'],
         exclude: /node_modules/
       },
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader'
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            query: {
+              sourceMap: false,
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]-[local]_[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: false,
+              includePaths: [path.resolve(__dirname, '..', 'app', 'styles')]
+            }
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                path.resolve(
+                  __dirname,
+                  '..',
+                  'app',
+                  'styles',
+                  'foundation.scss'
+                ),
+                path.resolve(__dirname, '..', 'app', 'styles', 'shared.scss')
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: 'file-loader'
+        loaders: ['file-loader']
       },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: ['html-loader']
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        loader: ['json-loader']
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader'
+        loader: ['file-loader']
       }
     ]
   },
@@ -57,6 +109,7 @@ module.exports = options => ({
     }),
 
     new CopyWebpackPlugin([{ from: 'public' }]),
+    new CheckerPlugin(),
 
     new webpack.DefinePlugin({
       'process.env': {
@@ -68,8 +121,7 @@ module.exports = options => ({
 
   resolve: {
     modules: ['app', 'node_modules', 'app/assets', 'data'],
-    extensions: ['.js', '.json'],
-    mainFields: ['browser', 'jsnext:main', 'module', 'main']
+    extensions: ['.ts', '.tsx', '.js', '.css', '.json', '.scss', '.less']
   },
   target: 'web',
   performance: options.performance || {},
